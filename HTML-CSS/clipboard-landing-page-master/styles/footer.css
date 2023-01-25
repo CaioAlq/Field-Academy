@@ -1,3 +1,27 @@
+footer {
+    background-color: rgb(243, 239, 239) ;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.logo-footer {
+    width: 120px;
+}
+
+.ul-footer {
+    color: hsl(210, 10%, 33%);
+    display: flex;
+    gap: 30px;
+}
+
+.logo-footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 5% 0;
+}
+
 @media screen and (max-width: 376px) {
     footer {
         background-color: rgb(243, 239, 239) ;
