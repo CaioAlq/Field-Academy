@@ -22,6 +22,7 @@ footer {
     align-items: center;
     justify-content: space-between;
 }
+
 .logo-footer {
     width: 10%;
 }
@@ -68,6 +69,8 @@ footer {
         flex-direction: column;
         gap: 30px;
         padding: 10% 0;
+        width: inherit;
+        height: inherit;
     }
 
     .logo-footer-container {
