@@ -26,12 +26,10 @@
     flex-direction: column;
     align-items: center;
 }
-/* #computer {
-    position: absolute;
-    width: 40%;
-    left: -30px;
-    top: 1000px
-} */
+
+#computer {
+    width: 80%;
+}
 
 .list-container {
     display: flex;
