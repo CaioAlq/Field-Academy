@@ -35,6 +35,11 @@ footer {
     height: 80px;
 }
 
+.ul-footer li:hover {
+    cursor: pointer;
+    color: #56ad9c;
+}
+
 .logo-footer-container {
     display: flex;
     justify-content: center;

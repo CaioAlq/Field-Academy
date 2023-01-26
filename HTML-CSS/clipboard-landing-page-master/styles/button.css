@@ -18,6 +18,11 @@
     box-shadow: 0 3px hsl(171, 66%, 36%);
 }
 
+.button-ios:hover {
+    background-color: #5ccdbb;
+    cursor: pointer;
+}
+
 .button-mac {
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: 600;
@@ -29,6 +34,11 @@
     padding: 18px 0;
     border-radius: 35px;
     box-shadow: 0 3px hsl(233, 100%, 61%);
+}
+
+.button-mac:hover {
+    background-color: #8897fe;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 376px) {
