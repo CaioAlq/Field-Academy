@@ -23,21 +23,52 @@
 </head>
 <body>
 
-  Todo
+  <div class="container">
 
-  <!-- Add dynamic number --> items left
+    <div class="head-container">
+      <h1 class="main-heading">Todo</h1>
+    <button class="switch-mode"><img src="./images/icon-sun.svg" alt="Botão do modo de tela"></button>
+    </div>
+    
+    <div class="create-container">
 
-  All
-  Active
-  Completed
+      <form action="">
 
-  Clear Completed
+        <div class="radiobox-container">
+        </div>
 
-  Drag and drop to reorder list
+        <input 
+            id="create-item" 
+            class="create-item" 
+            type="text" 
+            name="item" 
+            placeholder="Create a new todo..." 
+        />
+          <label for="create-item"></label>
 
-  <div class="attribution">
+      </form>
+       
+    </div>
+
+    <!-- Add dynamic number --> 
+    <p><span class="left-itens"></span>items left</p> 
+
+    <ul>
+      <li>All</li>
+      <li>Active</li>
+      <li>Completed</li>
+    </ul>
+    
+    <button>Clear Completed</button>
+
+    <p>Drag and drop to reorder list</p>
+
+  </div>
+
+  
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Caio Alves</a>.
-  </div>
+  </div> -->
 </body>
 </html>
