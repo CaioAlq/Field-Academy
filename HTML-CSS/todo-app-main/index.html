@@ -33,26 +33,24 @@
     
     <div class="create-container">
 
-      <form action="">
+      <div class="form">
 
-        <div class="radiobox-container"></div>
+        <div class="radiobox-container" onclick="textInput()"></div>
 
         <input 
             id="create-item" 
             class="create-item" 
             type="text" 
-            name="item" 
             placeholder="Create a new todo..." 
         />
-          <label for="create-item"></label>
 
-      </form>
+      </div>
       
     </div>
 
     <div class="list-container">
 
-      <div class="item-container">
+      <!-- <div class="item-container">
          <div class="radiobox-container"></div>
          <div class="paragraph-container"><p>Novo</p></div>
       </div>
@@ -75,7 +73,7 @@
       <div class="item-container">
         <div class="radiobox-container"></div>
         <div class="paragraph-container"><p></p></div>
-      </div>
+      </div> -->
 
       <div class="footer-container">
         <p><span class="left-itens">5</span> items left</p> 
@@ -105,5 +103,6 @@
   </div>
 
  <script src="./js/switchMode.js"></script> 
+ <script src="./js/todo.js"></script> 
 </body>
 </html>
