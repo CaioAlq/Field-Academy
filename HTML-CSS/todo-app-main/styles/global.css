@@ -176,6 +176,8 @@ label {
     height: 70px;
     width: 100%;
 
+    border-radius: 5px;
+
     background-color: var(--list-bg-color);
 }
 
