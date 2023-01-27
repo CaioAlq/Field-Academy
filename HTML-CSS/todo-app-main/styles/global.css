@@ -1,10 +1,13 @@
 :root {
     --primary-color: hsl(220, 98%, 61%);
 
-    /* Dark Theme */
-    --dark-theme-color: hsl(235, 21%, 11%);
+    --bg-url: url("../images/bg-desktop-dark.jpg");
+
+    --theme-color: hsl(235, 21%, 11%);
     --list-bg-color: hsl(235, 24%, 19%);
-    --letter-color: hsl(236, 9%, 61%);
+    --letter-color-default: hsl(236, 9%, 61%);
+    --letter-color-new: hsl(233, 11%, 84%);
+    --letter-color-done: hsl(234, 11%, 52%);
 
     font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
@@ -12,10 +15,12 @@
 }
 
 body {
-    background-color: var(--dark-theme-color);
-    background-image: url("../images/bg-desktop-dark.jpg");
+    background-color: var(--theme-color);
+    background-image: var(--bg-url);
     background-repeat: no-repeat;
     background-size: 100%;
+
+    color: var(--letter-color-default);
 
     height: 980px;
 
@@ -72,6 +77,9 @@ body {
 
     height: 70px;
     width: 100%;
+
+    margin-top: 50px;
+    box-shadow: 0px 11px 94px -30px rgba(0,0,0,0.75);
 }
 
 form {
@@ -85,6 +93,8 @@ form {
 .create-item {
     background-color: transparent;
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    color: var(--letter-color-new);
 
     width: 90%;
     height: 100%;
@@ -93,8 +103,13 @@ form {
 }
 
 .create-item::placeholder {
-    color: var(--letter-color);
-    font-size: 1rem;
+    color: var(--letter-color-default);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.create-item:focus {
+    outline: none;
 }
 
 .radiobox-container {
@@ -103,7 +118,7 @@ form {
 
     margin: 0 15px;
 
-    border: 1px solid var(--letter-color);
+    border: 1px solid var(--letter-color-default);
     
     border-radius: 50px;
 }
@@ -112,3 +127,60 @@ label {
     visibility: hidden;
 }
 
+.list-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 60%;
+
+    border-radius: 5px;
+
+    background-color: var(--list-bg-color);
+    box-shadow: 0px 11px 94px -30px rgba(0,0,0,0.75);
+}
+
+.item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    border-bottom: 0.1px solid var(--letter-color-done);
+
+    height: 70px;
+    width: 100%;
+}
+
+.paragraph-container {
+    color: var(--letter-color-new);
+    display: flex;
+    align-items: center;
+    width: 91%;
+    height: 100%;
+}
+
+.paragraph-container p {
+    font-size: 1.1rem;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 70px;
+    width: 100%;
+
+    background-color: var(--list-bg-color);
+}
+
+.ul-footer {
+    display: flex;
+    gap: 30px;
+
+    margin-left: 5%;
+}
+
+.ul-footer li {
+    cursor: default;
+}

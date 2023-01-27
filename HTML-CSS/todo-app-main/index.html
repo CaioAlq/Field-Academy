@@ -17,25 +17,25 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { position:absolute; bottom: 1px; font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
+
 <body>
 
   <div class="container">
 
     <div class="head-container">
       <h1 class="main-heading">Todo</h1>
-    <button class="switch-mode"><img src="./images/icon-sun.svg" alt="Botão do modo de tela"></button>
+    <button class="switch-mode" onclick="changeMode()"><img id="icon-img" src="images/icon-sun.svg" alt="Botão do modo de tela"></button>
     </div>
     
     <div class="create-container">
 
       <form action="">
 
-        <div class="radiobox-container">
-        </div>
+        <div class="radiobox-container"></div>
 
         <input 
             id="create-item" 
@@ -47,28 +47,63 @@
           <label for="create-item"></label>
 
       </form>
-       
+      
+    </div>
+
+    <div class="list-container">
+
+      <div class="item-container">
+         <div class="radiobox-container"></div>
+         <div class="paragraph-container"><p>Novo</p></div>
+      </div>
+      <div class="item-container">
+        <div class="radiobox-container"></div>
+        <div class="paragraph-container"><p>Novo</p></div>
+      </div>
+      <div class="item-container">
+        <div class="radiobox-container"></div>
+        <div class="paragraph-container"><p></p></div>
+      </div>
+      <div class="item-container">
+        <div class="radiobox-container"></div>
+        <div class="paragraph-container"><p></p></div>
+      </div>
+      <div class="item-container">
+        <div class="radiobox-container"></div>
+        <div class="paragraph-container"><p></p></div>
+      </div>
+      <div class="item-container">
+        <div class="radiobox-container"></div>
+        <div class="paragraph-container"><p></p></div>
+      </div>
+
+      <div class="footer-container">
+        <p><span class="left-itens">5</span> items left</p> 
+
+        <ul class="ul-footer">
+          <li>All</li>
+          <li>Active</li>
+          <li>Completed</li>
+        </ul>
+        
+        <button class="btn-clear">Clear Completed</button>
+      </div>
+
+
     </div>
 
     <!-- Add dynamic number --> 
-    <p><span class="left-itens"></span>items left</p> 
-
-    <ul>
-      <li>All</li>
-      <li>Active</li>
-      <li>Completed</li>
-    </ul>
     
-    <button>Clear Completed</button>
-
     <p>Drag and drop to reorder list</p>
 
   </div>
 
   
-  <!-- <div class="attribution">
+  <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Caio Alves</a>.
-  </div> -->
+  </div>
+
+ <script src="./js/switchMode.js"></script> 
 </body>
 </html>
