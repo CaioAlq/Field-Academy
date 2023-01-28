@@ -86,7 +86,6 @@ body {
 .form {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
     width: 100%;
 }
@@ -126,11 +125,20 @@ body {
     border-radius: 50px;
 }
 
-label {
-    visibility: hidden;
+.close-container {
+    width: 25px;
+    height: 25px;
+
+    margin: 0 15px;
+
+    background-image: url(../images/icon-cross.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    cursor: pointer;
 }
 
-.list-container {
+.middle-container {
     display: flex;
     flex-direction: column;
 
@@ -141,6 +149,21 @@ label {
 
     background-color: var(--list-bg-color);
     box-shadow: 0px 11px 94px -30px rgba(0,0,0,0.75);
+}
+
+.list-container {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.list-container::-webkit-scrollbar-thumb {
+    background-color: var(--letter-color-done);
+    border-radius: 5px;
 }
 
 .item-container {
