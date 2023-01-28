@@ -22,13 +22,14 @@ function addListItems(lastItem) {
     
     const itemRadiobox = document.createElement("div");
     itemRadiobox.classList.add("radiobox-container");
+    itemRadiobox.setAttribute("onclick", "checkItem(this)");
     
     const itemParagraph = document.createElement("div");
     itemParagraph.classList.add("paragraph-container");
 
     const closeContainer = document.createElement("div");
     closeContainer.classList.add("close-container");
-    closeContainer.setAttribute("onclick", "clearItem(element)");
+    closeContainer.setAttribute("onclick", "clearItem(this)");
     
     const itemText = document.createElement("p");
     itemText.innerText = lastItem;
@@ -49,20 +50,27 @@ function addListItems(lastItem) {
 };
 
 
+function checkItem (element) {
+    element.classList.toggle("check-list");
+    element.parentNode.classList.toggle("item-done");
+    let paragraph = element.nextElementSibling.querySelector("p");
+
+    paragraph.classList.toggle("check-item");
+
+}
+
 function clearItem(element) {
 
-    // const valueParagraph = document.querySelectorAll(".paragraph-container");
+    const valueItem = element.parentNode.textContent;
 
-    // console.log(valueParagraph);
+    let first = listArr.findIndex((x => x === valueItem));
 
-    // const closeContainer = document.getElementsByClassName("close-container");
+    listArr.splice(first, 1);
 
-    element
+    let leftItensCount = document.querySelector(".left-itens");
+    leftItensCount.innerText = listArr.length;
 
-    // const itemContainer = closeContainer.parentNode;
-    
-    // closeContainer.remove();
-    // itemContainer.remove();
+    element.parentNode.remove();
 }
 
 
@@ -75,5 +83,3 @@ function clearList() {
         listContainer.removeChild(listContainer.firstChild);
     }
 }
-
-

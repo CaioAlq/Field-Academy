@@ -7,7 +7,8 @@
     --list-bg-color: hsl(235, 24%, 19%);
     --letter-color-default: hsl(236, 9%, 61%);
     --letter-color-new: hsl(233, 11%, 84%);
-    --letter-color-done: hsl(234, 11%, 52%);
+    --letter-color-done: hsl(233, 14%, 35%);
+    
     --checkbox-color: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 
     font-family: 'Josefin Sans', sans-serif;
@@ -120,9 +121,43 @@ body {
 
     margin: 0 15px;
 
+    border: 1px solid var(--letter-color-done);
+    
+    border-radius: 50px;
+}
+
+.check-list {
+    width: 25px;
+    height: 25px;
+
+    cursor: pointer;
+
+    margin: 0 15px;
+
     border: 1px solid var(--letter-color-default);
     
     border-radius: 50px;
+
+    position: relative;
+    background: var(--checkbox-color);
+}
+
+.check-list::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/icon-check.svg);
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 100%;
+
+    top: 30%;
+    left: 30%;
+}
+
+.check-item {
+    color: var(--letter-color-done);
+    text-decoration: line-through;
 }
 
 .close-container {
@@ -181,12 +216,12 @@ body {
     color: var(--letter-color-new);
     display: flex;
     align-items: center;
-    width: 91%;
+    width: 82%;
     height: 100%;
 }
 
 .paragraph-container p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .footer-container {
