@@ -28,7 +28,7 @@ function changeMode() {
         styleMode.setProperty("--list-bg-color", "hsl(235, 24%, 19%)");
         styleMode.setProperty(" --letter-color-default", "hsl(236, 9%, 61%)");
         styleMode.setProperty("--letter-color-new", "hsl(233, 11%, 84%)");
-        styleMode.setProperty("--letter-color-done", "hsl(234, 11%, 52%)");
+        styleMode.setProperty("--letter-color-done", "hsl(233, 14%, 35%)");
 
 
         currentMode = "dark";
