@@ -1,4 +1,7 @@
 let listArr = [];
+let checkArr = [];
+
+let leftItensCount = document.querySelector(".left-itens");
 
 function textInput() {
     let input = document.getElementById("create-item").value;
@@ -42,7 +45,6 @@ function addListItems(lastItem) {
     itemParagraph.appendChild(itemText);
     itemContainer.appendChild(closeContainer);
 
-    let leftItensCount = document.querySelector(".left-itens");
     leftItensCount.innerText = listArr.length;
 
     console.log(listArr);
@@ -67,7 +69,6 @@ function clearItem(element) {
 
     listArr.splice(first, 1);
 
-    let leftItensCount = document.querySelector(".left-itens");
     leftItensCount.innerText = listArr.length;
 
     element.parentNode.remove();
@@ -77,9 +78,18 @@ function clearItem(element) {
 function clearList() {
 
     const listContainer = document.querySelector(".list-container");
-    listArr = [];
+    const checkedItem = listContainer.querySelectorAll(".check-list");
 
-    while (listContainer.firstChild) {
-        listContainer.removeChild(listContainer.firstChild);
-    }
+    checkedItem.forEach((element) => {
+        
+        checkArr.push(element.parentNode.textContent);
+        element.parentNode.remove();    
+    })
+
+    listArr = listArr.filter((item) => {
+        return !checkArr.includes(item);
+    })
+    
+    leftItensCount.innerText = listArr.length;
+
 }
