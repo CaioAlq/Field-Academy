@@ -4,18 +4,19 @@ const leftItensCount = document.querySelector(".left-itens");
 
 const itemInput = document.getElementById("create-item");
 
+let btnAll = document.getElementById("all");
+let btnActive = document.getElementById("active");
+let btnCompleted = document.getElementById("completed");
+
 
 function textInput() {
     let input = document.getElementById("create-item").value;
     
-    if(input === "") {
-        alert("Adicione algum a fazer")
-    } else {
+    if(input != "") {
         listArr.push(input);
         const lastItem = listArr[listArr.length-1];
         addListItems(lastItem);
     }
-
     document.getElementById("create-item").value = "";
 }
 
@@ -55,10 +56,10 @@ function addListItems(lastItem) {
 
     leftItensCount.innerText = listArr.length;
 
-    console.log(listArr);
-
+    if(listArr.length == 1) {
+        btnAll.classList.add("active");
+    }
 };
-
 
 function checkItem (element) {
     element.classList.toggle("check-list");
@@ -100,4 +101,54 @@ function clearList() {
     
     leftItensCount.innerText = listArr.length;
 
+}
+
+function allItens() {
+    btnAll.classList.add("active");
+    btnActive.classList.remove("active");
+    btnCompleted.classList.remove("active");
+
+    const itemContainer = document.querySelectorAll(".item-container");
+    
+    if(listArr.length > 0) {
+        btnAll.classList.add("active");
+    } else {
+        btnAll.classList.remove("active");
+    };
+
+    itemContainer.forEach((element) => {
+        element.classList.remove("hidden");
+    });
+}
+
+function activeItens() {
+    btnActive.classList.add("active");
+    btnAll.classList.remove("active");
+    btnCompleted.classList.remove("active");
+
+    const itensCheck = document.querySelectorAll(".item-container");
+
+    itensCheck.forEach((element) => {
+        if(element.classList.contains("item-done")) {
+            element.classList.add("hidden");
+        } else {
+            element.classList.remove("hidden");
+        }
+    });
+}
+
+function completedItens() {
+    btnActive.classList.remove("active");
+    btnAll.classList.remove("active");
+    btnCompleted.classList.add("active");
+
+    const itensCompleted = document.querySelectorAll(".item-container");
+
+    itensCompleted.forEach((element) => {
+        if(!element.classList.contains("item-done")) {
+            element.classList.add("hidden");
+        } else {
+            element.classList.remove("hidden");
+        }
+    });
 }

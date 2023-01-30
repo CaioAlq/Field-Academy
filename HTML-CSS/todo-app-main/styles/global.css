@@ -239,6 +239,14 @@ body {
     background-color: var(--list-bg-color);
 }
 
+.footer-container p {
+    font-size: 0.9rem;
+}
+
+.active {
+    color: var(--primary-color);
+}
+
 .ul-footer {
     display: flex;
     gap: 30px;
@@ -246,10 +254,16 @@ body {
     margin-left: 5%;
 }
 
-.ul-footer li {
-    cursor: default;
+.ul-footer li:hover {
+    color: var(--letter-color-new);
+    cursor: pointer;
 }
 
-.btn-clear {
+.btn-clear:hover {
+    color: var(--letter-color-new);
     cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
