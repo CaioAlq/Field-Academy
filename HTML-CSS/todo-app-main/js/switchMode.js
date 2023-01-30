@@ -10,6 +10,7 @@ function changeMode() {
         iconMode.src = "images/icon-moon.svg"
 
         styleMode.setProperty("--bg-url", "url('../images/bg-desktop-light.jpg')");
+        styleMode.setProperty("--bg-url-mobile", "url('../images/bg-mobile-light.jpg')");
 
         styleMode.setProperty("--theme-color", "hsl(0, 0%, 98%)");
         styleMode.setProperty("--list-bg-color", "#fff");
@@ -23,6 +24,7 @@ function changeMode() {
         iconMode.src = "images/icon-sun.svg"
 
         styleMode.setProperty("--bg-url", "url('../images/bg-desktop-dark.jpg')");
+        styleMode.setProperty("--bg-url-mobile", "url('../images/bg-mobile-dark.jpg')");
 
         styleMode.setProperty("--theme-color", "hsl(235, 21%, 11%)");
         styleMode.setProperty("--list-bg-color", "hsl(235, 24%, 19%)");

@@ -2,6 +2,7 @@
     --primary-color: hsl(220, 98%, 61%);
 
     --bg-url: url("../images/bg-desktop-dark.jpg");
+    --bg-url-mobile: url("../images/bg-mobile-dark.jpg");
 
     --theme-color: hsl(235, 21%, 11%);
     --list-bg-color: hsl(235, 24%, 19%);
@@ -169,6 +170,7 @@ body {
     background-image: url(../images/icon-cross.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 
     cursor: pointer;
 }
@@ -204,7 +206,7 @@ body {
 .item-container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
     border-bottom: 0.1px solid var(--letter-color-done);
 
@@ -266,4 +268,72 @@ body {
 
 .hidden {
     display: none;
+}
+
+@media screen and (max-width: 376px) {
+    body {
+        background-image: var(--bg-url-mobile);
+
+        height: 100vh;
+    }
+
+    .main-heading {
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 85%;
+
+        gap: 20px;
+
+        margin-top: 0;
+        margin-bottom: 10%;
+    }
+
+    .container > p:last-child {
+        position: absolute;
+        bottom: 30px;
+        font-size: 0.8rem;
+    }
+
+    .radiobox-container {
+        width: 22px;
+        height: 20px;
+    }
+    .create-container{
+        margin-top: 0;
+    }
+
+    .create-item{
+        font-size: 1rem;
+    }
+
+    .create-item::placeholder {
+        font-size: 0.9rem;
+    }
+
+    .paragraph-container {
+        width: 70%;
+    }
+
+    .paragraph-container p {
+        font-size: 1rem;
+    }
+
+    .footer-container p {
+        font-size: 0.8rem;
+    }
+
+    .ul-footer {
+        background-color: var(--list-bg-color);
+        border-radius: 5px;
+
+        height: 60px;
+        width: 100%;
+
+        margin-left: 0;
+
+        align-items: center;
+        justify-content: center;
+    }
 }

@@ -100,7 +100,7 @@ function clearList() {
     })
     
     leftItensCount.innerText = listArr.length;
-
+    checkArr = [];
 }
 
 function allItens() {
@@ -152,3 +152,25 @@ function completedItens() {
         }
     });
 }
+
+const mediaMobile = window.matchMedia("(max-width: 376px)");
+
+mediaMobile.onchange = (element) => {
+
+    const middleContainer = document.querySelector(".middle-container");
+    const footer = document.querySelector(".footer-container");
+    const listFooter = document.querySelector(".ul-footer");
+
+    if(element.matches) {
+        footer.parentNode.insertBefore(listFooter, footer.nextSibling);
+        middleContainer.parentNode.insertBefore(listFooter, middleContainer.nextSibling);
+    } else {
+        middleContainer.appendChild(listFooter);
+        footer.insertBefore(listFooter, footer.children[1]);
+    }
+}
+
+
+
+
+
