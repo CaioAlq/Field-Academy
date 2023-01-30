@@ -249,3 +249,7 @@ body {
 .ul-footer li {
     cursor: default;
 }
+
+.btn-clear {
+    cursor: pointer;
+}

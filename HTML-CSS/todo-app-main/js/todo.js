@@ -1,13 +1,13 @@
 let listArr = [];
 let checkArr = [];
+const leftItensCount = document.querySelector(".left-itens");
 
-let leftItensCount = document.querySelector(".left-itens");
+const itemInput = document.getElementById("create-item");
+
 
 function textInput() {
     let input = document.getElementById("create-item").value;
-
-    document.getElementById("create-item").value = "";
-
+    
     if(input === "") {
         alert("Adicione algum a fazer")
     } else {
@@ -15,7 +15,15 @@ function textInput() {
         const lastItem = listArr[listArr.length-1];
         addListItems(lastItem);
     }
+
+    document.getElementById("create-item").value = "";
 }
+
+itemInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        textInput();
+    }
+})
 
 function addListItems(lastItem) {
     const listContainer = document.querySelector(".list-container");
