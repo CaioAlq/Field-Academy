@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Harry Potter e a Pedra Filosofal",
+        "author_id": 1
+    },
+    {
+        "id": 2,
+        "name": "Harry Potter e a Camara Secreta",
+        "author_id": 1
+    }, 
+    {
+        "id": 3,
+        "name": "Harry Potter e a Prisioneiro de Azkaban",
+        "author_id": 1
+    }, 
+    {
+        "id": 4,
+        "name": "O Senhor dos Aneis",
+        "author_id": 2
+    }
+]
