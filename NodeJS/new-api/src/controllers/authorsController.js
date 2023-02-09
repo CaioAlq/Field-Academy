@@ -3,7 +3,7 @@ let authors = require('../data/authors.json');
 
 exports.getAuthors = (req, res) => {
     for (const author of authors) {
-        const allBooks = books.filter(book => book.author_id === author.id);
+        const allBooks = books.map(book => ({ id: book.id, name: book.name, author_id: book.author_id})).filter(book => book.author_id === author.id);
         author.total_books = allBooks.length;
         author.all_books = allBooks;
     }
