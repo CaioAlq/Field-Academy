@@ -18,5 +18,10 @@
         "id": 4,
         "name": "O Senhor dos Aneis",
         "author_id": 2
+    },
+    {
+        "id": 5,
+        "name": "Uma breve história do tempo", 
+        "author_id": null
     }
 ]

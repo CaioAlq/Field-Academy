@@ -20,3 +20,15 @@ exports.postAuthors = (req, res) => {
     authors.push(req.body);
     res.send("Successfully posted!")
 }
+
+exports.putAuthors = (req, res) => {
+    const findItem = authors.findIndex(author => author.id === +req.params.idAuthor);
+    authors.splice(findItem, 1, req.body);
+    res.send("Successfully updated!");
+}
+
+exports.deleteAuthors = (req, res) => {
+    const findItem = authors.findIndex(author => author.id === +req.params.idAuthor);
+    authors.splice(findItem, 1);
+    res.send("Successfully deleted!");
+}

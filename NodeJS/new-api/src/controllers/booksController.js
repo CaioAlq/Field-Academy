@@ -3,7 +3,7 @@ let authors = require('../data/authors.json');
 
 exports.getBooks = (req, res) => {
     for (const book of books) {
-        book.author = authors.find(author => author.id === book.author_id)
+        book.author = authors.map(author => ({ id: author.id, name: author.name})).find(author => author.id === book.author_id)
     }
 
     const infoBook = {
